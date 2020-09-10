@@ -141,3 +141,12 @@
 #define DEFAULT_X_MAX_TRAVEL 500.0 // mm NOTE: Must be a positive value.
 #define DEFAULT_Y_MAX_TRAVEL 500.0 // mm NOTE: Must be a positive value.
 #define DEFAULT_Z_MAX_TRAVEL 80.0 // mm NOTE: Must be a positive value.
+
+
+// Overrides of config.h
+#undef HOMING_CYCLE_0 
+#undef HOMING_CYCLE_1
+#undef HOMING_CYCLE_2 
+#define HOMING_CYCLE_0 bit(X_AXIS)  // TYPICALLY REQUIRED: First move Z to clear workspace.
+#define HOMING_CYCLE_1 bit(Y_AXIS)
+
