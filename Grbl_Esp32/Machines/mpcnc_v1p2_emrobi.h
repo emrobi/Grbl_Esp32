@@ -147,6 +147,7 @@
 #undef HOMING_CYCLE_0 
 #undef HOMING_CYCLE_1
 #undef HOMING_CYCLE_2 
-#define HOMING_CYCLE_0 bit(X_AXIS)  // TYPICALLY REQUIRED: First move Z to clear workspace.
-#define HOMING_CYCLE_1 bit(Y_AXIS)
+#define HOMING_CYCLE_0 (bit(X_AXIS)|bit(Y_AXIS))  // Homes both X-Y in one cycle. NOT COMPATIBLE WITH COREXY!!!
+#define HOMING_CYCLE_1 bit(X_AXIS)  // Home x and y independently to get autosquare
+#define HOMING_CYCLE_2 bit(Y_AXIS)
 
