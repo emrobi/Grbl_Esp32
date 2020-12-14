@@ -2,7 +2,8 @@
 // clang-format off
 
 /*
-    mpcnc_v1p2.h
+    mpcnc_v1p2_emrobi.h
+       -- modified from mpcnc_v1p2.h
     Part of Grbl_ESP32
 
     Pin assignments for the Buildlog.net MPCNC controller
@@ -138,3 +139,9 @@
 #define DEFAULT_X_MAX_TRAVEL 500.0 // mm NOTE: Must be a positive value.
 #define DEFAULT_Y_MAX_TRAVEL 500.0 // mm NOTE: Must be a positive value.
 #define DEFAULT_Z_MAX_TRAVEL 80.0 // mm NOTE: Must be a positive value.
+
+#undef HOMING_CYCLE_0 
+#undef HOMING_CYCLE_1
+#undef HOMING_CYCLE_2 
+#define HOMING_CYCLE_0 bit(X_AXIS)  // Home x and y independently to get autosquare
+#define HOMING_CYCLE_1 bit(Y_AXIS)
