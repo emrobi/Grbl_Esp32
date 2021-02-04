@@ -28,7 +28,7 @@
 
 // // Pin assignments for the Buildlog.net MPCNC controller
 
-#define MACHINE_NAME "MPCNC_V1P2_EMROBI_20201227"
+#define MACHINE_NAME "MPCNC_V1P2_EMROBI_20210204"
 
 #define DEFAULT_HOMING_SQUARED_AXES (bit(X_AXIS) | bit(Y_AXIS))
 
